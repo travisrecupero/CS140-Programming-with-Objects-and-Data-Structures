@@ -1,0 +1,23 @@
+package lab05;
+import java.util.Arrays;
+
+public class Zipper{
+
+public static int[] zip(int[] arr1, int[] arr2){
+
+	if(arr1 == null || arr2 == null || arr1.length != arr2.length){
+		throw new IllegalArgumentException("bad input");
+	}
+
+	int size = arr1.length + arr2.length;
+	int[] temp = new int[size];
+	
+	int k = 0;
+	for(int i = 0; i < arr1.length; i++){
+			temp[k++] = arr1[i];
+			temp[k++] = arr2[i];
+	}
+	return temp;
+}
+
+}
